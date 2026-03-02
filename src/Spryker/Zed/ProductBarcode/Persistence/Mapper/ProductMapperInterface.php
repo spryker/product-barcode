@@ -12,10 +12,5 @@ use Orm\Zed\Product\Persistence\SpyProduct;
 
 interface ProductMapperInterface
 {
-    /**
-     * @param \Orm\Zed\Product\Persistence\SpyProduct $spyProduct
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function mapSpyProductToProductConcreteTransfer(SpyProduct $spyProduct): ProductConcreteTransfer;
 }

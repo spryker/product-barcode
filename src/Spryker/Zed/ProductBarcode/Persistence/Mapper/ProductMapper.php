@@ -12,11 +12,6 @@ use Orm\Zed\Product\Persistence\SpyProduct;
 
 class ProductMapper implements ProductMapperInterface
 {
-    /**
-     * @param \Orm\Zed\Product\Persistence\SpyProduct $spyProduct
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function mapSpyProductToProductConcreteTransfer(SpyProduct $spyProduct): ProductConcreteTransfer
     {
         $productBarcodeTransfer = (new ProductConcreteTransfer())->fromArray($spyProduct->toArray(), true);

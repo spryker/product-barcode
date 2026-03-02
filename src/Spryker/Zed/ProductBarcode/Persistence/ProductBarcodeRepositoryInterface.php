@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductConcreteTransfer;
 
 interface ProductBarcodeRepositoryInterface
 {
-    /**
-     * @param int $idProduct
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function getProductById(int $idProduct): ProductConcreteTransfer;
 }

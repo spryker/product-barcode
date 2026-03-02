@@ -21,11 +21,6 @@ class ProductBarcodeDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const SERVICE_BARCODE = 'SERVICE_BARCODE';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = $this->addBarcodeService($container);
@@ -33,11 +28,6 @@ class ProductBarcodeDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addBarcodeService(Container $container): Container
     {
         $container->set(static::SERVICE_BARCODE, function (Container $container) {

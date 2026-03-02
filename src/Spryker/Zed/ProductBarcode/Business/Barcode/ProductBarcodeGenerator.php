@@ -24,10 +24,6 @@ class ProductBarcodeGenerator implements ProductBarcodeGeneratorInterface
      */
     protected $productSkuProvider;
 
-    /**
-     * @param \Spryker\Zed\ProductBarcode\Dependency\Service\ProductBarcodeToBarcodeServiceInterface $barcodeService
-     * @param \Spryker\Zed\ProductBarcode\Business\Product\ProductSkuProviderInterface $stockCodeSelector
-     */
     public function __construct(
         ProductBarcodeToBarcodeServiceInterface $barcodeService,
         ProductSkuProviderInterface $stockCodeSelector
@@ -36,12 +32,6 @@ class ProductBarcodeGenerator implements ProductBarcodeGeneratorInterface
         $this->productSkuProvider = $stockCodeSelector;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param string|null $generatorPlugin
-     *
-     * @return \Generated\Shared\Transfer\BarcodeResponseTransfer
-     */
     public function generateBarcode(ProductConcreteTransfer $productConcreteTransfer, ?string $generatorPlugin): BarcodeResponseTransfer
     {
         $code = $this

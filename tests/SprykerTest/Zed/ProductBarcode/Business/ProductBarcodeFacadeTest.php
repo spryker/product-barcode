@@ -49,9 +49,6 @@ class ProductBarcodeFacadeTest extends Unit
      */
     protected $productConcreteBuilder;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -67,9 +64,6 @@ class ProductBarcodeFacadeTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testBarcodeGenerationWithoutPluginSpecifiedReturnsCorrectData(): void
     {
         $product = $this->productConcreteBuilder->build();
@@ -83,9 +77,6 @@ class ProductBarcodeFacadeTest extends Unit
         $this->assertSame(static::BARCODE_GENERATION_ENCODING, $barcodeResponseTransfer->getEncoding());
     }
 
-    /**
-     * @return void
-     */
     public function testBarcodeGenerationWithMockPluginSpecifiedReturnsCorrectData(): void
     {
         $product = $this->productConcreteBuilder->build();
@@ -99,9 +90,6 @@ class ProductBarcodeFacadeTest extends Unit
         $this->assertSame(static::BARCODE_GENERATION_ENCODING, $barcodeResponseTransfer->getEncoding());
     }
 
-    /**
-     * @return void
-     */
     public function testBarcodeGenerationUsesProductDataFromDatabaseAsFallback(): void
     {
         $existingProduct = $this->tester->haveProduct();

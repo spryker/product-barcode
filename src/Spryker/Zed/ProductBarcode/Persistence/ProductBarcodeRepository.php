@@ -15,11 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class ProductBarcodeRepository extends AbstractRepository implements ProductBarcodeRepositoryInterface
 {
-    /**
-     * @param int $idProduct
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function getProductById(int $idProduct): ProductConcreteTransfer
     {
         $spyProduct = $this

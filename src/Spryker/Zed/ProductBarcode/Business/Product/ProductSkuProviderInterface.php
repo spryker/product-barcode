@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductConcreteTransfer;
 
 interface ProductSkuProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return string
-     */
     public function getConcreteProductSku(ProductConcreteTransfer $productConcreteTransfer): string;
 }

@@ -18,11 +18,6 @@ class ProductBarcodeDependencyProvider extends AbstractDependencyProvider
      */
     public const SERVICE_BARCODE = 'SERVICE_BARCODE';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -31,11 +26,6 @@ class ProductBarcodeDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addBarcodeService(Container $container): Container
     {
         $container->set(static::SERVICE_BARCODE, function (Container $container) {

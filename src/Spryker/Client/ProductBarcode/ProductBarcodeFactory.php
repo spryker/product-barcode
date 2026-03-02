@@ -12,9 +12,6 @@ use Spryker\Client\ProductBarcode\Dependency\Service\ProductBarcodeToBarcodeServ
 
 class ProductBarcodeFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ProductBarcode\Dependency\Service\ProductBarcodeToBarcodeServiceInterface
-     */
     public function getBarcodeService(): ProductBarcodeToBarcodeServiceInterface
     {
         return $this->getProvidedDependency(ProductBarcodeDependencyProvider::SERVICE_BARCODE);

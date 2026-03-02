@@ -18,17 +18,11 @@ use Spryker\Zed\ProductBarcode\Persistence\Mapper\ProductMapperInterface;
  */
 class ProductBarcodePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductQuery
-     */
     public function createSpyProductQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductBarcode\Persistence\Mapper\ProductMapperInterface
-     */
     public function createProductMapper(): ProductMapperInterface
     {
         return new ProductMapper();

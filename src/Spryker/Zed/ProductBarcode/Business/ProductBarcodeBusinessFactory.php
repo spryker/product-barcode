@@ -21,9 +21,6 @@ use Spryker\Zed\ProductBarcode\ProductBarcodeDependencyProvider;
  */
 class ProductBarcodeBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductBarcode\Business\Barcode\ProductBarcodeGeneratorInterface
-     */
     public function createProductBarcodeGenerator(): ProductBarcodeGeneratorInterface
     {
         return new ProductBarcodeGenerator(
@@ -32,9 +29,6 @@ class ProductBarcodeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductBarcode\Business\Product\ProductSkuProviderInterface
-     */
     public function createProductSkuProvider(): ProductSkuProviderInterface
     {
         return new ProductSkuProvider(
@@ -42,9 +36,6 @@ class ProductBarcodeBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductBarcode\Dependency\Service\ProductBarcodeToBarcodeServiceInterface
-     */
     public function getBarcodeService(): ProductBarcodeToBarcodeServiceInterface
     {
         return $this->getProvidedDependency(ProductBarcodeDependencyProvider::SERVICE_BARCODE);

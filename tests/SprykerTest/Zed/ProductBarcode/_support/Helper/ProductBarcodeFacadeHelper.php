@@ -27,12 +27,6 @@ class ProductBarcodeFacadeHelper extends Module
             ->facade();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param string|null $generatorPlugin
-     *
-     * @return \Generated\Shared\Transfer\BarcodeResponseTransfer
-     */
     public function generateBarcode(ProductConcreteTransfer $productConcreteTransfer, ?string $generatorPlugin = null): BarcodeResponseTransfer
     {
         return $this

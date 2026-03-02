@@ -17,19 +17,11 @@ class ProductSkuProvider implements ProductSkuProviderInterface
      */
     protected $productBarcodeRepository;
 
-    /**
-     * @param \Spryker\Zed\ProductBarcode\Persistence\ProductBarcodeRepositoryInterface $productBarcodeRepository
-     */
     public function __construct(ProductBarcodeRepositoryInterface $productBarcodeRepository)
     {
         $this->productBarcodeRepository = $productBarcodeRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return string
-     */
     public function getConcreteProductSku(ProductConcreteTransfer $productConcreteTransfer): string
     {
         $sku = $productConcreteTransfer->getSku();
@@ -45,11 +37,6 @@ class ProductSkuProvider implements ProductSkuProviderInterface
         return $this->getConcreteProductSkuFromDatabase($idProductConcrete);
     }
 
-    /**
-     * @param int $idProductConcrete
-     *
-     * @return string
-     */
     protected function getConcreteProductSkuFromDatabase(int $idProductConcrete): string
     {
         return $this
